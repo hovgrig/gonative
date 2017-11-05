@@ -1,0 +1,19 @@
+{
+  "name": "gonative",
+  "version": "1.0.0",
+  "description": "GoNative 2017 talk on GraphQL",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hovgrig/gonative.git"
+  },
+  "author": "hovgrig@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hovgrig/gonative/issues"
+  },
+  "homepage": "https://github.com/hovgrig/gonative#readme"
+}
