@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hovgrig/gonative/issues"
   },
-  "homepage": "https://github.com/hovgrig/gonative#readme"
+  "homepage": "https://github.com/hovgrig/gonative#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
