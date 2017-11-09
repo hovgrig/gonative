@@ -12,9 +12,7 @@ var talk = {
     description: "Returns the list of all talks",
     resolve: function(root) {
         return new Promise(function(resolve, reject) { // Notice the promise here, it is to handle async work.
-            //db.talks.forEach(function(talk){
                 resolve(db.talks);
-            //});
         });
     },
 };
