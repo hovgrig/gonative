@@ -15,4 +15,4 @@ app.use('/graphql', graphqlHttp({
 app.get('/', (req, res) => res.send('Hello from GoNative 2017!'));
 
 // Start the service.
-app.listen(port, () => console.log('Listening on port: ' + port));
+app.listen(port, () => console.log(`Listening on port: ${port}`));

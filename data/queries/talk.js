@@ -5,14 +5,14 @@ import {
 } from 'graphql'
 
 import TalkType from '../types/TalkType';
-import db from '../db/db'
+import {talks} from '../db/db'
 
-var talk = {
+const talk = {
     type: new GraphQLList(TalkType),
     description: "Returns the list of all talks",
-    resolve: function(root) {
-        return new Promise(function(resolve, reject) { // Notice the promise here, it is to handle async work.
-                resolve(db.talks);
+    resolve: () => {
+        return new Promise((resolve, reject) => { // Notice the promise here, it is to handle async work.
+            resolve(talks);
         });
     },
 };

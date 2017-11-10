@@ -5,23 +5,27 @@ import {
 } from 'graphql'
 
 import SpeakerType from '../types/SpeakerType';
-import db from '../db/db'
+import {speakers} from '../db/db'
 
-var speaker = {
+const speaker = {
     type: new GraphQLList(SpeakerType),
     description: "Returns the list of all speakers",
-    resolve: function(root) {
-        return new Promise(function(resolve, reject) { // Notice the promise here, it is to handle async work.
+    resolve: (root) => {
+        return new Promise((resolve, reject) => { // Notice the promise here, it is to handle async work.
             if(root) {
-                db.speakers.forEach(function(speaker) {
+                let found = false;
+                speakers.forEach((speaker) => {
                     if(speaker.id == root.speakerId) {
-                        console.log('found');
-                        resolve([speaker]);
+                        found = true;
+                        return resolve([speaker]);
                     }
                 });
+                if(!found) {
+                    resolve();
+                }
             }
             else {
-                resolve(db.speakers);
+                resolve(speakers);
             }
         });
     },

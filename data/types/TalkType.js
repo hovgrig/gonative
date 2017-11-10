@@ -15,6 +15,7 @@ const TalkType = new GraphQLObjectType({
         speakerId: { type: new GraphQLNonNull(GraphQLInt) },
         name: { type: new GraphQLNonNull(GraphQLString) },
         description: { type: GraphQLString },
+        time: { type: GraphQLString },
         speaker: speakerQuery,
     },
 });
