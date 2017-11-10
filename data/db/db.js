@@ -1,7 +1,7 @@
 const events = [{
 	id: 1,
     name: 'Go Native 2017',
-    description: 'Tech conferance in Yerevan',
+    description: 'Tech conference in Yerevan',
     location: 'Yerevan, Armenia',
 }];
 
